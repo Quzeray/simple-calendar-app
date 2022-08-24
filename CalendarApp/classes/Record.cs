@@ -56,7 +56,7 @@ namespace CalendarApp.classes
         private static void Edit(object sender, EventArgs e)
         {
             string[] args = null;
-            MainForm mainForm = GetArgsFromRecord(sender, args);
+            MainForm mainForm = GetArgsFromRecord(sender, ref args);
             mainForm.CreateEditForm(args);
         }
 
@@ -64,7 +64,7 @@ namespace CalendarApp.classes
         private static void Delete(object sender, EventArgs e)
         {
             string[] args = null;
-            MainForm mainForm = GetArgsFromRecord(sender, args);
+            MainForm mainForm = GetArgsFromRecord(sender, ref args);
 
             Activity activity;
             if (args[2] != null)
@@ -76,7 +76,7 @@ namespace CalendarApp.classes
         }
 
         //Метод берет аргументы для создания события из элемента записи. Так же возвращает ссылку на основную форму.
-        private static MainForm GetArgsFromRecord(object sender, string[] args)
+        private static MainForm GetArgsFromRecord(object sender, ref string[] args)
         {
             ContextMenu contextMenu = (ContextMenu)((MenuItem)sender).Parent;
             Button record = (Button)contextMenu.SourceControl;
