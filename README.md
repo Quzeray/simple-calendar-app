@@ -13,6 +13,6 @@
 
 ## Примеры UI
 
-![Пример интерфейса](/images//UI_Example_1.png)
+![Пример интерфейса 1](/CalendarApp/images/UI_Example_1.png)
 
-![Пример интерфейса](/images//UI_Example_1.png)
+![Пример интерфейса 2](/CalendarApp/images/UI_Example_2.png)
